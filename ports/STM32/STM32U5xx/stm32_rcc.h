@@ -15,7 +15,7 @@
 */
 
 /**
- * @file    STM32F7xx/stm32_rcc.h
+ * @file    STM32U5xx/stm32_rcc.h
  * @brief   RCC helper driver header.
  * @note    This file requires definitions from the ST header file
  *          @p stm32f7xx.h.
