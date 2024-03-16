@@ -1,0 +1,2 @@
+# CHIBIOSHAL-STM32U5
+ChibiOS/HAL for the STM32U5xx
