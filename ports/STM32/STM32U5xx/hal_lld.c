@@ -1,7 +1,7 @@
 
 /**
- * @file    LPC13xx/hal_lld.c
- * @brief   LPC13xx HAL subsystem low level driver source.
+ * @file    STM32U5xx/hal_lld.c
+ * @brief   STM32U5xx HAL subsystem low level driver source.
  *
  * @addtogroup HAL
  * @{
