@@ -1,7 +1,7 @@
 # CHIBIOSHAL-STM32U5
 This is a first draft of a ChibiOS/HAL for the STM32U5xx.
 
-Hey there, this setup is pretty basic but surprisingly effective on my end. That said, there's still plenty of room for improvement, so if you're up for it, dive in and lend a hand!
+This setup is pretty basic but surprisingly effective on my end. That said, there's still plenty of room for improvement, so if you're up for it, dive in and lend a hand!
 
 Here's a lineup of drivers that got the port and a solid run:
 
