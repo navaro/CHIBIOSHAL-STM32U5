@@ -5,12 +5,10 @@ This setup is pretty basic but surprisingly effective on my end. That said, ther
 
 Here's a lineup of drivers that got the port and a solid run:
 
-- CRYPv1
 - DMAv2
 - EXTIv1
 - GPIOv2
 - I2Cv3
-- OTGv1
 - RNGv1
 - RTCv2
 - SPIv3
