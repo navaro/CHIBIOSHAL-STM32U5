@@ -121,14 +121,14 @@
 #define STM32_DMA1_CH5_NUMBER               34
 #define STM32_DMA1_CH6_NUMBER               35
 #define STM32_DMA1_CH7_NUMBER               36
-#define STM32_DMA2_CH0_NUMBER               0
-#define STM32_DMA2_CH1_NUMBER               0
-#define STM32_DMA2_CH2_NUMBER               0
-#define STM32_DMA2_CH3_NUMBER               0
-#define STM32_DMA2_CH4_NUMBER               0
-#define STM32_DMA2_CH5_NUMBER               0
-#define STM32_DMA2_CH6_NUMBER               0
-#define STM32_DMA2_CH7_NUMBER               0
+#define STM32_DMA1_CH8_NUMBER               80
+#define STM32_DMA1_CH9_NUMBER               81
+#define STM32_DMA1_CH10_NUMBER              82
+#define STM32_DMA1_CH11_NUMBER              83
+#define STM32_DMA1_CH12_NUMBER              84
+#define STM32_DMA1_CH13_NUMBER              85
+#define STM32_DMA1_CH14_NUMBER              86
+#define STM32_DMA1_CH15_NUMBER              87
 
 /*
  * MDMA units.
@@ -204,8 +204,8 @@
 #define STM32_I2C1_ERROR_HANDLER            I2C1_ER_IRQHandler
 #define STM32_I2C2_EVENT_HANDLER            I2C2_EV_IRQHandler
 #define STM32_I2C2_ERROR_HANDLER            I2C2_ER_IRQHandler
-#define STM32_I2C3_EVENT_HANDLER            Vector160
-#define STM32_I2C3_ERROR_HANDLER            Vector164
+#define STM32_I2C3_EVENT_HANDLER            I2C3_EV_IRQHandler
+#define STM32_I2C3_ERROR_HANDLER            I2C3_ER_IRQHandler
 #define STM32_I2C4_EVENT_HANDLER            Vector1BC
 #define STM32_I2C4_ERROR_HANDLER            Vector1C0
 
@@ -213,8 +213,8 @@
 #define STM32_I2C1_ERROR_NUMBER             56
 #define STM32_I2C2_EVENT_NUMBER             57
 #define STM32_I2C2_ERROR_NUMBER             58
-#define STM32_I2C3_EVENT_NUMBER             0
-#define STM32_I2C3_ERROR_NUMBER             0
+#define STM32_I2C3_EVENT_NUMBER             88
+#define STM32_I2C3_ERROR_NUMBER             89
 #define STM32_I2C4_EVENT_NUMBER             0
 #define STM32_I2C4_ERROR_NUMBER             0
 

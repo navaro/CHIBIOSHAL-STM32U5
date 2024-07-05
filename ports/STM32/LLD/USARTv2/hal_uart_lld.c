@@ -184,22 +184,6 @@ UARTDriver UARTD8;
 /* Driver local functions.                                                   */
 /*===========================================================================*/
 
-//  on = transmit
-#if defined CFG_G5_PDU && CFG_G5_PDU
-/*static*/ void
-_DEnRE_set( void *pUART, bool OnOff )
-{
-    if (pUART == BOARD_UART_DATABUS0) {
-        if (!OnOff) palClearLine(LINE_DATABUS0_DE) ;
-        else palSetLine(LINE_DATABUS0_DE) ;
-    }
-    else if (pUART == BOARD_UART_DATABUS1) {
-        if (!OnOff) palClearLine(LINE_DATABUS1_DE) ;
-        else palSetLine(LINE_DATABUS1_DE) ;
-    }
-
-}
-#endif
 
 /**
  * @brief   Status bits translation.
@@ -1097,9 +1081,6 @@ void uart_lld_stop(UARTDriver *uartp) {
  * @notapi
  */
 void uart_lld_start_send(UARTDriver *uartp, size_t n, const void *txbuf) {
-#if defined CFG_G5_PDU && CFG_G5_PDU
-  _DEnRE_set (uartp, true) ;
-#endif
 #if defined(STM32U5) // STM32U5 PORT
   dmaStreamDisable(uartp->dmatx);
 #endif
@@ -1168,9 +1149,6 @@ size_t uart_lld_stop_send(UARTDriver *uartp) {
  * @notapi
  */
 void uart_lld_start_receive(UARTDriver *uartp, size_t n, void *rxbuf) {
-#if defined CFG_G5_PDU && CFG_G5_PDU
-  _DEnRE_set (uartp, false) ;
-#endif
   /* Stopping previous activity (idle state).*/
   dmaStreamDisable(uartp->dmarx);
 #if !defined(STM32U5) // STM32U5 PORT

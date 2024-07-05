@@ -76,7 +76,9 @@
 #define STM32_HAS_UART8                     FALSE
 #define STM32_HAS_LPUART1                   TRUE
 
+#define STM32_UART_USART2_IRQ_PRIORITY      5
 #define STM32_UART_USART3_IRQ_PRIORITY      5
+#define STM32_UART_USART4_IRQ_PRIORITY      9
 #define STM32_UART_UART5_IRQ_PRIORITY       5
 
 #define STM32_SERIAL_UART4_PRIORITY         8
@@ -95,8 +97,10 @@
 
 #define STM32_DMAMUX1_USART2_RX				26
 #define STM32_DMAMUX1_USART2_TX				27
-#define STM32_DMAMUX1_USART3_RX				28
-#define STM32_DMAMUX1_USART3_TX				29
+#define STM32_DMAMUX1_USART3_RX             28
+#define STM32_DMAMUX1_USART3_TX             29
+#define STM32_DMAMUX1_USART4_RX             30
+#define STM32_DMAMUX1_USART4_TX             31
 #define STM32_DMAMUX1_UART5_RX				32
 #define STM32_DMAMUX1_UART5_TX				33
 
@@ -130,7 +134,7 @@
 /* I2C attributes.*/
 #define STM32_HAS_I2C1						TRUE
 #define STM32_HAS_I2C2						TRUE
-#define STM32_HAS_I2C3						FALSE
+#define STM32_HAS_I2C3						TRUE
 #define STM32_HAS_I2C4						FALSE
 #define STM32_I2C4_USE_BDMA					FALSE
 

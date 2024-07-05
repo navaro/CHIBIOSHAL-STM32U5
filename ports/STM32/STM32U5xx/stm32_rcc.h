@@ -927,21 +927,21 @@
  *
  * @api
  */
-#define rccEnableI2C3(lp) rccEnableAPB1L(RCC_APB1LENR_I2C3EN, lp)
+#define rccEnableI2C3(lp) rccEnableAPB3(RCC_APB3ENR_I2C3EN, lp)
 
 /**
  * @brief   Disables the I2C3 peripheral clock.
  *
  * @api
  */
-#define rccDisableI2C3() rccDisableAPB1L(RCC_APB1LENR_I2C3EN)
+#define rccDisableI2C3() rccDisableAPB3(RCC_APB3ENR_I2C3EN)
 
 /**
  * @brief   Resets the I2C3 peripheral.
  *
  * @api
  */
-#define rccResetI2C3() rccResetAPB1L(RCC_APB1LRSTR_I2C3RST)
+#define rccResetI2C3() rccResetAPB3(RCC_APB3RSTR_I2C3RST)
 
 /**
  * @brief   Enables the I2C4 peripheral clock.

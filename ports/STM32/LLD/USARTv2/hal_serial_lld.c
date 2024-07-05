@@ -616,7 +616,7 @@ void sd_lld_init(void) {
   oqObjectInit(&SD2.oqueue, sd_out_buf2, sizeof sd_out_buf2, notify2, &SD2);
   SD2.usart = USART2;
   SD2.clock = STM32_USART2CLK;
-#if !defined(STM32_USART2_SUPPRESS_ISR) && defined(STM32_USART2_NUMBER)
+#if /*!defined(STM32_USART2_SUPPRESS_ISR) &&*/ defined(STM32_USART2_NUMBER)
   nvicEnableVector(STM32_USART2_NUMBER, STM32_SERIAL_USART2_PRIORITY);
 #endif
 #endif
@@ -638,7 +638,7 @@ void sd_lld_init(void) {
   oqObjectInit(&SD4.oqueue, sd_out_buf4, sizeof sd_out_buf4, notify4, &SD4);
   SD4.usart = UART4;
   SD4.clock = STM32_UART4CLK;
-#if !defined(STM32_UART4_SUPPRESS_ISR) && defined(STM32_UART4_NUMBER)
+#if /*!defined(STM32_UART4_SUPPRESS_ISR) &&*/ defined(STM32_UART4_NUMBER)
   nvicEnableVector(STM32_UART4_NUMBER, STM32_SERIAL_UART4_PRIORITY);
 #endif
 #endif
@@ -723,6 +723,9 @@ void sd_lld_start(SerialDriver *sdp, const SerialConfig *config) {
 #if STM32_SERIAL_USE_USART2
     if (&SD2 == sdp) {
       rccEnableUSART2(true);
+#if /*defined(STM32_USART2_SUPPRESS_ISR) &&*/ defined(STM32_USART2_HANDLER)
+      nvicEnableVector(STM32_USART2_NUMBER, STM32_SERIAL_USART2_PRIORITY);
+#endif
     }
 #endif
 #if STM32_SERIAL_USE_USART3
@@ -733,6 +736,9 @@ void sd_lld_start(SerialDriver *sdp, const SerialConfig *config) {
 #if STM32_SERIAL_USE_UART4
     if (&SD4 == sdp) {
       rccEnableUART4(true);
+#if /*defined(STM32_UART4_SUPPRESS_ISR) &&*/ defined(STM32_UART4_HANDLER)
+      nvicEnableVector(STM32_UART4_NUMBER, STM32_SERIAL_UART4_PRIORITY);
+#endif
     }
 #endif
 #if STM32_SERIAL_USE_UART5

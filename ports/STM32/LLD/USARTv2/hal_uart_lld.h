@@ -640,7 +640,7 @@
 
 #if STM32_UART_USE_UART4
 #if defined(STM32_UART4_IS_USED)
-#error "UARTD4 requires UART4 but it is already used"
+// #error "UARTD4 requires UART4 but it is already used"
 #else
 #define STM32_UART4_IS_USED
 #endif

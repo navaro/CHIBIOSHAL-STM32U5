@@ -724,6 +724,7 @@ static inline void osalThreadSleep(sysinterval_t delay) {
 static inline msg_t osalThreadSuspendS(thread_reference_t *trp) {
 
 	*trp = os_thread_current () ;
+	os_thread_wait (TIME_IMMEDIATE) ;
 	return (msg_t)os_thread_wait (TX_WAIT_FOREVER) ;
 
 }
@@ -751,6 +752,9 @@ static inline msg_t osalThreadSuspendTimeoutS(thread_reference_t *trp,
                                               sysinterval_t timeout) {
 
 	*trp = os_thread_current () ;
+	if (timeout != TIME_IMMEDIATE) {
+		os_thread_wait (TIME_IMMEDIATE) ;
+	}
 	return (msg_t)os_thread_wait (timeout) ;
 
 }

@@ -395,36 +395,36 @@
 #error "STM32_DMA1_CH7_NUMBER missing in registry"
 #endif
 
-#if !defined(STM32_DMA2_CH0_NUMBER)
-#error "STM32_DMA2_CH0_NUMBER missing in registry"
+#if !defined(STM32_DMA1_CH8_NUMBER)
+#error "STM32_DMA1_CH8_NUMBER missing in registry"
 #endif
 
-#if !defined(STM32_DMA2_CH1_NUMBER)
-#error "STM32_DMA2_CH1_NUMBER missing in registry"
+#if !defined(STM32_DMA1_CH9_NUMBER)
+#error "STM32_DMA1_CH9_NUMBER missing in registry"
 #endif
 
-#if !defined(STM32_DMA2_CH2_NUMBER)
-#error "STM32_DMA2_CH2_NUMBER missing in registry"
+#if !defined(STM32_DMA1_CH10_NUMBER)
+#error "STM32_DMA1_CH10_NUMBER missing in registry"
 #endif
 
-#if !defined(STM32_DMA2_CH3_NUMBER)
-#error "STM32_DMA2_CH3_NUMBER missing in registry"
+#if !defined(STM32_DMA1_CH11_NUMBER)
+#error "STM32_DMA1_CH11_NUMBER missing in registry"
 #endif
 
-#if !defined(STM32_DMA2_CH4_NUMBER)
-#error "STM32_DMA2_CH4_NUMBER missing in registry"
+#if !defined(STM32_DMA1_CH12_NUMBER)
+#error "STM32_DMA1_CH12_NUMBER missing in registry"
 #endif
 
-#if !defined(STM32_DMA2_CH5_NUMBER)
-#error "STM32_DMA2_CH5_NUMBER missing in registry"
+#if !defined(STM32_DMA1_CH13_NUMBER)
+#error "STM32_DMA1_CH13_NUMBER missing in registry"
 #endif
 
-#if !defined(STM32_DMA2_CH6_NUMBER)
-#error "STM32_DMA2_CH6_NUMBER missing in registry"
+#if !defined(STM32_DMA1_CH14_NUMBER)
+#error "STM32_DMA1_CH14_NUMBER missing in registry"
 #endif
 
-#if !defined(STM32_DMA2_CH7_NUMBER)
-#error "STM32_DMA2_CH7_NUMBER missing in registry"
+#if !defined(STM32_DMA1_CH15_NUMBER)
+#error "STM32_DMA1_CH15_NUMBER missing in registry"
 #endif
 
 #if (STM32_DMA_SUPPORTS_DMAMUX == TRUE) || defined(__DOXYGEN__)
@@ -453,7 +453,6 @@ typedef struct {
 #else
   DMA_Stream_TypeDef    *stream;        /**< @brief Associated DMA stream.  */
   volatile uint32_t     *ifcr;          /**< @brief Associated IFCR reg.    */
-#endif
 #if (STM32_DMA_SUPPORTS_DMAMUX == TRUE) || defined(__DOXYGEN__)
   DMAMUX_Channel_TypeDef *mux;          /**< @brief Associated DMA mux.     */
 #else
@@ -461,6 +460,7 @@ typedef struct {
 #endif
   uint8_t               shift;          /**< @brief Bits offset in xIFCR
                                              register.                      */
+#endif
   uint8_t               selfindex;      /**< @brief Index to self in array. */
   uint8_t               vector;         /**< @brief Associated IRQ vector.  */
 } stm32_dma_stream_t;
